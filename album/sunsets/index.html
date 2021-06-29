@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sunsets | CoolCoderSJ</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+	  <center>
+	  <div id="nav" class="nav">
+		  <div class="nav-link">
+	  <h1 id="title"></h1>
+	  <a href="/">Home</a>
+	  <a href="/album/astro">Astro</a>
+	  <a href="/album/sunsets" class="active">Sunsets</a>
+	  <a href="/album/food">Food</a>
+	  <a href="/album/macro">Macro</a>
+	  <a href="/album/landscapes">Landscapes</a>
+	  <a href="/album/nature">Nature</a>
+	  </div>
+	  <br>
+	  </div>
+	  </center>
+	  <div class="content">
+	  <div class="grid-panel">
+		  <div class="column">
+			  <img src="/images/sunsets/1.jpg">
+			  <img src="/images/sunsets/5.jpg">
+			  <img src="/images/sunsets/4.jpg">
+			  <img src="/images/sunsets/8.jpg">
+		  </div>
+		  <div class="column">
+			  <img src="/images/sunsets/2.jpg">
+			  <img src="/images/sunsets/6.jpg">
+			  <img src="/images/sunsets/10.jpg">
+			  <img src="/images/sunsets/9.jpg">
+			  <img src="/images/sunsets/12.jpg">
+		  </div>
+		  <div class="column">
+			  <img src="/images/sunsets/3.jpg">
+			  <img src="/images/sunsets/7.jpg">
+			  <img src="/images/sunsets/1.jpg">
+			  <img src="/images/sunsets/13.jpg">
+		  </div>
+	  </div>
+	  </div>
+	  <script>
+const debounce = (fn) => {
+  let frame;
+  return (...params) => {
+        if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+	   frame = requestAnimationFrame(() => {
+            fn(...params);
+    });
+
+  } 
+};
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+storeScroll();
+
+
+			  var i = 0;
+				var txt = 'Sunsets | Shuchir Jain'; /* The text */
+				var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+				function typeWriter() {
+				if (i < txt.length) {
+					document.getElementById("title").innerHTML += txt.charAt(i);
+					i++;
+					setTimeout(typeWriter, speed);
+				}
+				}
+				typeWriter()
+		  </script>
+    <script src="/script.js"></script>
+  </body>
+</html>

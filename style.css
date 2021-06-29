@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+
+.text, .link, p, h1, h2, h3, h4, h5, h6, a, label, legend, textarea, button, html, body, footer, .replit-auth-button {
+	color: white;
+	font-family: 'Baloo Paaji 2', cursive;
+}
+
+html {
+	background: #1a202c;
+	padding: 15px;
+}
+
+.nav {
+	background: #1a202c;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border: none;
+	border-radius: 6px;
+	transition: 250ms;
+	padding-right: 15px;
+	z-index: 10;
+}
+
+.content {
+	margin-top: 160px;
+}
+
+#title {
+	font-size: 40px;
+	text-align: center;
+	transition: 250ms;
+}
+
+html:not([data-scroll="0"]) .nav {
+	box-shadow: #262f3c 4px 4px 4px 4px;
+	transition: 250ms;
+}
+
+html:not([data-scroll="0"]) #title {
+	font-size: 25px;
+	teXt-align: right;
+	transition: 250ms;
+}
+
+.cover {
+	height: 480px;
+	width: 370px;
+	overflow: hidden;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+
+	position: relative;
+}
+
+.cover:hover {
+	cursor: pointer;
+}
+
+.cover img {
+	object-fit: cover;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	height: calc(100% + 2px);
+	width: calc(100% + 2px);
+}
+
+.info {
+	background: #131720;
+	position: relative;
+	z-index: 5;
+	transition: 250ms;
+	opacity: 0;
+	height: 480px;
+	width: 370px;
+}
+
+.cover:hover .info {
+	transition: 250ms;
+	opacity: 1;
+}
+
+.cover-title {
+	text-transform: uppercase;
+}
+
+.info-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+}
+
+.group {
+	display: grid;
+	grid-gap: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.album {
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+.group {
+	display: grid;
+	grid-gap: 1fr;
+	grid-template-columns: repeat(1, 1fr);
+}
+}
+
+.nav-link a {
+	text-decoration: none;
+	transition: 500ms;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.nav-link a:hover, .nav-link a.active {
+	color: rgb(101, 205, 203);
+	transition: 500ms;
+
+}
+
+.nav-link {
+	text-align: center;
+	margin-left: 30px;
+}
+
+html:not([data-scroll="0"]) .nav-link {
+	text-align: left;
+	transition: 250ms;
+}
+
+
+html:not([data-scroll="0"]) .nav-link {
+	transition: 500ms;
+	font-size: 25px;
+}
+
+.grid-panel {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	margin-left: 200px;
+}
+
+.grid-panel .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.grid-panel .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .gird-panel .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-panel .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
