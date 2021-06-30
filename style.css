@@ -25,7 +25,7 @@ html {
 }
 
 .content {
-	margin-top: 160px;
+	margin-top: 180px;
 }
 
 #title {
@@ -56,6 +56,9 @@ html:not([data-scroll="0"]) #title {
 	display: block;
 
 	position: relative;
+	box-shadow: #0a0b10 4px 4px 4px 4px;
+	border-radius: 8px;
+	border: none;
 }
 
 .cover:hover {
