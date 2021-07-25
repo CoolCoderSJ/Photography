@@ -228,3 +228,30 @@ html:not([data-scroll="0"]) .nav-link {
 	top: 40px;
 	right: 80px;
 }
+
+.new {
+	position: relative;
+	z-index: 10;
+	top: 15px;
+	left: 10px;
+}
+
+.new-inner {
+	position: absolute;
+	text-decoration: none;
+	border-radius: 15px;
+	background-color: #14B8A6;
+	scale: 0.9;
+	padding: 7px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-right: 10px;
+}
+
+.fad {
+	position: absolute;
+    top: 4px;
+    left: 55px;
+    font-weight: bold;
+    scale: 1.2;
+}
