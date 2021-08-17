@@ -21,7 +21,7 @@ html {
 	border-radius: 6px;
 	transition: 250ms;
 	padding-right: 15px;
-	z-index: 10;
+	z-index: 1000;
 }
 
 .content {
