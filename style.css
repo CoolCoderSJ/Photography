@@ -6,6 +6,10 @@
 	font-family: 'Baloo Paaji 2', cursive;
 }
 
+* {
+	transition: 500ms;
+}
+
 html {
 	background: #1a202c;
 	padding: 15px;
@@ -56,7 +60,7 @@ html:not([data-scroll="0"]) #title {
 	display: block;
 
 	position: relative;
-	box-shadow: #0a0b10 4px 4px 4px 4px;
+	box-shadow: #0a0b10 0px 0px 4px 4px;
 	border-radius: 8px;
 	border: none;
 }
@@ -76,13 +80,15 @@ html:not([data-scroll="0"]) #title {
 }
 
 .info {
-	background: #131720;
-	position: relative;
-	z-index: 5;
-	transition: 250ms;
-	opacity: 0;
-	height: 480px;
-	width: 370px;
+	background: rgb(19, 23, 32, 0.7);
+    position: relative;
+    z-index: 5;
+    transition: 250ms;
+    opacity: 0;
+    height: 480px;
+    width: 370px;
+    backdrop-filter: blur(5px);
+    text-align: center;
 }
 
 .cover:hover .info {
@@ -106,6 +112,7 @@ html:not([data-scroll="0"]) #title {
 	display: grid;
 	grid-gap: 1fr;
 	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
 }
 
 .album {
@@ -113,9 +120,6 @@ html:not([data-scroll="0"]) #title {
 	margin-bottom: 30px;
 }
 
-.last {
-	margin-left: 30px;
-}
 
 @media (max-width: 500px) {
 .group {
