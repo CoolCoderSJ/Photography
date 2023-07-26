@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Landscapes | CoolCoderSJ</title>
+    <title>Landscapes | Shuchir Jain</title>
     <link href="/style.css" rel="stylesheet" type="text/css" />
 	<script defer data-domain="photography.shuchir.dev" src="https://plausible.shuchir.dev/js/script.js"></script>
 <script async src="https://umami.shuchir.dev/script.js" data-website-id="69f75b32-c3c5-4148-8da7-f35d819b6a9d"></script>
@@ -12,7 +12,7 @@
 	  <center>
 	  <div id="nav" class="nav">
 		  <div class="nav-link">
-	  <h1 id="title"></h1>
+	  <h1 id="title">Landscapes | Shuchir Jain</h1>
 	  <a href="/">Home</a>
 	  <a href="/album/astro">Astro</a>
 	  <a href="/album/sunsets">Sunsets</a>
@@ -21,7 +21,7 @@
 	  <a href="/album/landscapes" class="active">Landscapes</a>
 	  <a href="/album/nature">Nature</a>
 	  </div>
-	  <br>
+	  <small style="text-align: center; display: block; margin-left: 30px; margin-bottom: 10px;"><i>Click on any picture to expand it</i></small>
 	  </div>
 	  </center>
 	  <div class="content">
@@ -119,39 +119,6 @@
 		  </div>
 	  </div>
 	  </div>
-	  <script>
-const debounce = (fn) => {
-  let frame;
-  return (...params) => {
-        if (frame) { 
-      cancelAnimationFrame(frame);
-    }
-	   frame = requestAnimationFrame(() => {
-            fn(...params);
-    });
-
-  } 
-};
-const storeScroll = () => {
-  document.documentElement.dataset.scroll = window.scrollY;
-}
-document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-storeScroll();
-
-
-			  var i = 0;
-				var txt = 'Landscapes | Shuchir Jain'; /* The text */
-				var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-				function typeWriter() {
-				if (i < txt.length) {
-					document.getElementById("title").innerHTML += txt.charAt(i);
-					i++;
-					setTimeout(typeWriter, speed);
-				}
-				}
-				typeWriter()
-		  </script>
     <script src="/script.js"></script>
   </body>
 </html>
